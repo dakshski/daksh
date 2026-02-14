@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Our Moments 💕</title>
+<style>
+body { margin:0; font-family:Arial; background:linear-gradient(135deg,#ffe6f0,#ffcce0); display:flex; justify-content:center; align-items:center; height:100vh; overflow:hidden;}
+.card { background:white; padding:40px; border-radius:25px; text-align:center; box-shadow:0 10px 30px rgba(0,0,0,0.1);}
+img { width:150px; border-radius:15px; margin:10px;}
+button { padding:12px 25px; border-radius:25px; border:none; background:#ff4d88; color:white; cursor:pointer;}
+.heart { position:absolute; font-size:20px; animation:float 8s linear infinite; opacity:0.7;}
+@keyframes float {0%{transform:translateY(100vh);}100%{transform:translateY(-10vh);}}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>most memorable day for me 💖</h2>
+  <img src="photo1.jpg">
+  <img src="photo2.jpg">
+  <br>
+  <button onclick="next()">Next</button>
+</div>
+
+<audio autoplay loop>
+  <source src="song3.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function next(){ window.location.href="question.html"; }
+for(let i=0;i<30;i++){
+  let heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML=["💗","💖","❤️"][Math.floor(Math.random()*3)];
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.animationDuration=(5+Math.random()*5)+"s";
+  document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
