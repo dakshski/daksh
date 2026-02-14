@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>YAYAYAYYAYAYAY 💖</title>
+<style>
+body { margin:0; font-family:Arial; background:linear-gradient(135deg,#ffb6c1,#ff69b4); display:flex; justify-content:center; align-items:center; height:100vh; overflow:hidden; color:white;}
+.card { text-align:center;}
+.heart { position:absolute; font-size:25px; animation:float 6s linear infinite; opacity:0.8;}
+@keyframes float {0%{transform:translateY(100vh);}100%{transform:translateY(-10vh);}}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>YAYAYAYYAYAYAY❤️</h1>
+  <p>I LOVE YOUUUUUUU 💝</p>
+  <p>WE'LL MEET JAB I COME BACK TO KORBAAAA.</p>
+</div>
+
+<audio autoplay loop>
+  <source src="song5.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+for(let i=0;i<40;i++){
+  let heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML=["💗","💖","❤️"][Math.floor(Math.random()*3)];
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.animationDuration=(4+Math.random()*4)+"s";
+  document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
