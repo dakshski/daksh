@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Something's i wanna say 🫣</title>
+<style>
+body { margin:0; font-family:Arial; background:linear-gradient(135deg,#ffe6f0,#ffcce0); display:flex; justify-content:center; align-items:center; height:100vh; overflow:hidden;}
+.card { background:white; padding:40px; border-radius:25px; text-align:center; box-shadow:0 10px 30px rgba(0,0,0,0.1);}
+button { padding:12px 25px; border-radius:25px; border:none; background:#ff4d88; color:white; cursor:pointer;}
+.heart { position:absolute; font-size:20px; animation:float 8s linear infinite; opacity:0.7;}
+@keyframes float {0%{transform:translateY(100vh);}100%{transform:translateY(-10vh);}}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2> ik humari ab jyada baat toh nahi hoti, but jab bhi hoti hai, it makes my day 🫠 </h2>
+  <p> there's js so many pyaari pyaari memories of you, that jab aapse baat nahi bhi hoti, these memories make me smile</p>
+  <p> yk i remember the very first eye contact we had,  i was all red, aur aap kitte pyaar se sharmaye the🫣</p>
+  <p> jab kabhi aap mere liye tiffin leke aate the😶</p>
+  <p> the day i came to meet you in dhelwadi, before leaving for college, and we took selfies</p>
+  <p> the day i was leaving for college, us morning i came to see you in school, subah</p>
+  <p> hayeee, jitti baatien yaad karu utti kam hai 🫠 </p>
+  <button onclick="next()">Next</button>
+</div>
+
+<audio autoplay loop>
+  <source src="song2.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function next(){ window.location.href="page2.html"; }
+for(let i=0;i<30;i++){
+  let heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML=["💗","💖","❤️"][Math.floor(Math.random()*3)];
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.animationDuration=(5+Math.random()*5)+"s";
+  document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
